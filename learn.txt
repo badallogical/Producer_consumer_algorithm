@@ -1,0 +1,4 @@
+1. In static methods of class their is no this so any static member of class when used in side the function , then its not referring to the class member as this->member but its only a unknown varible name so specify the classname and then define the function name
+as class::member.
+
+2. INT_MAX and INT_MIN is defined in limits.h header and specify limits for signed int.

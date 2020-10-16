@@ -1,0 +1,45 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "SDL2",
+            "command": "D:\\System_Programs\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+               "-ID:\\System_Programs\\SDL_32bit\\include",
+               "-LD:\\System_Programs\\SDL_32bit\\lib",
+               "-w",
+               "-lmingw32",
+               "-lSDL2main",
+               "-lSDL2",
+               "-lSDL2_image",
+               "-lSDL2_ttf",
+               "-lSDL2_mixer",
+               "-o",
+               "${fileDirname}\\a.exe",
+               "&",
+               "${fileDirname}\\a.exe"
+               
+               
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "SDL2FinalExe",
+            "command": "g++ -g \"${file}\" -ID:\\System_Programs\\SDL_32bit\\include -LD:\\System_Programs\\SDL_32bit\\lib -w -Wl,-subsystem,windows  -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf  -lSDL2_image -lSDL2_mixer",
+            
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}
